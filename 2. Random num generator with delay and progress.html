@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator with Delay and Progress Indication</title>
+</head>
+<body>
+<script>
+    let delay = 3000;
+
+    //RANDOM NUMBER GENERATING FUNCTION
+    function generateRandomNum() {
+        let randomNum = Math.floor(Math.random() * 1000);
+        let displayMessage = console.log(`${delay} seconds remaining`);
+        return console.log(randomNum);
+    }
+
+   setTimeout(generateRandomNum, delay);
+</script>
+</body>
+</html>
