@@ -11,13 +11,24 @@
     let delay = 3000;
 
     //RANDOM NUMBER GENERATING FUNCTION
-    function generateRandomNum() {
-        let randomNum = Math.floor(Math.random() * 1000);
-        let displayMessage = console.log(`${delay} seconds remaining`);
-        return console.log(randomNum);
+    function generateRandomNumWithDelay() {
+        let timeRemaining = delay / 1000;
+        //setting the count down with console log
+        let countdownInterval = setInterval(() => {
+            console.log(`Generating random number in ${timeRemaining} seconds.`);
+            timeRemaining--;
+
+            if(timeRemaining === 0) {
+                clearInterval(countdownInterval);
+                let randomNum = Math.floor(Math.random() * 100);
+                console.log(`Random Number Generated: ${randomNum}`);
+            }    
+
+        }, 1000);
     }
 
-   setTimeout(generateRandomNum, delay);
+    //calling the function
+    generateRandomNumWithDelay();
 </script>
 </body>
 </html>
