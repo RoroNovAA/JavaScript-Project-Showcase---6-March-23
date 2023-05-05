@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build a feature for Store's Inventory.</title>
+</head>
+<body>
+<script>
+    //object with price as dollar
+    const items = {
+        "orange": 5,
+        "banana": 2,
+        "avocado": 3,
+        "mango": 8,
+        "apple": 3
+    };
+
+    //empty object to store rupee value
+    let itemsInRupees = {};
+
+    //main loop
+    for(let item in items) {
+        itemsInRupees[item] = items[item] * 80;
+    }
+
+    //console logging the results
+      console.log(itemsInRupees); 
+
+</script>
+</body>
+</html>
