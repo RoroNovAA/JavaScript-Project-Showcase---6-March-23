@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtering and Capitalizing: Books Published After 2010 with Author Names</title>
+</head>
+<body>
+<script>
+    //original collection
+    const books = [
+    {title: 'The Hunger Games', author: 'suzanne collins', year: 2008},
+    {title: 'Divergent', author: 'veronica roth', year: 2011},
+    {title: 'The Fault in Our Stars', author: 'john green', year: 2012},
+    {title: 'Gone Girl', author: 'gillian flynn', year: 2012},
+    {title: 'Ready Player One', author: 'ernest cline', year: 2011},
+    {title: 'The Girl on the Train', author: 'paula hawkins', year: 2015},
+    {title: 'The Martian', author: 'andy weir', year: 2011},
+    {title: 'The Nightingale', author: 'kristin hannah', year: 2015},
+    ];
+
+    //main
+    const filteredBooks = books.filter(book => book.year >= 2010)
+      .map(book => ({...book, author: book.author.toUpperCase()}));
+
+      //console logging the results
+      console.log(filteredBooks);
+</script>
+</body>
+</html>
