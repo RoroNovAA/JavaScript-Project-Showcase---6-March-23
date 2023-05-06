@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL VALIDATION</title>
+</head>
+<body>
+<script>
+const regex = /^(https?:\/\/)[\w\d\S]+(\.[\w]+)+$/;
+
+function validateURL(url) {
+  if (regex.test(url)) {
+    console.log(`${url} is a valid URL.`);
+  } else {
+    console.log(`${url} is not a valid URL.`);
+  }
+}
+
+validateURL('https://www.example.com'); // Valid URL
+validateURL('http://example.net'); // Valid URL
+validateURL('ftp://example.org'); // Invalid URL
+
+</script>
+</body>
+</html>
