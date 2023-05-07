@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkedin Profile URL Validator</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+    function isValidLinkedInUrl(url) {
+  const regex = /^https:\/\/www\.linkedin\.com\/in\/[a-zA-Z0-9_-]{5,30}[a-zA-Z0-9]$/;
+  return regex.test(url);
+}
+
+// Example usage
+console.log(isValidLinkedInUrl("https://www.linkedin.com/in/john-doe_123")); // true
+console.log(isValidLinkedInUrl("https://www.linkedin.com/in/123john-doe")); // false
+console.log(isValidLinkedInUrl("https://www.linkedin.com/in/john-doe")); // false
+
+</script>
+</html>
